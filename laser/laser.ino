@@ -3,8 +3,8 @@ int count = 0 ;
 int counter = 0 ;
 String ssid = "iball-baton" ; // wifi ssid
 String password = "ATad2913"; // wifi password
-String ip = "192.168.1.104" ; // ip address of server
-int port = 8000 ; // port of server
+String ip = "192.168.1.100" ; // ip address of server
+int port = 5000 ; // port of server
 String val = "" ;
 WiFiClient client1; //client object
 
@@ -63,8 +63,10 @@ void clientMode() {
         if (Command == "D") {
           client1.println(readLaser());
         }
+      }
     } else { // if connection is lost then go to count = 0
       count = 0 ;
+
     }
   }
 }
